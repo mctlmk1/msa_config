@@ -31,15 +31,6 @@ spring:
 server:
   port: ${PORT:8080}
 
-
-# Discovery Server Access
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: localhost:2221/eureka/
-  instance:
-    hostname: ${spring.cloud.client.hostname}
-
 ##INFRA_ADMIN Settings
 project:
   name: spring-cloud-ui
