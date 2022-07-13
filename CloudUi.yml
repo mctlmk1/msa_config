@@ -36,7 +36,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${eureka-domain}:2221/eureka/
+      defaultZone: localhost:2221/eureka/
   instance:
     hostname: ${spring.cloud.client.hostname}
 
