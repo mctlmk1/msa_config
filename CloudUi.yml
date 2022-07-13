@@ -2,6 +2,14 @@
 spring:
   application:
     name: CloudUi  # Identify this application
+  thymeleaf:
+    prefix: /WEB-INF/views/
+    suffix: .html
+  redis:
+      host: ${redis-domain}
+      password: ${redis-password}
+      port: ${redis-port}
+      timeout: 2100
   boot:
     #Spring boot admin settings
     admin:
@@ -19,6 +27,19 @@ spring:
         #Read Timeout in ms when App's status and info
         read-timeout: 5000
       metadata-keys-to-sanitize: .password$,.*secret$,.*key$,.$token$,.credentials.,.*vcap_services$
+
+server:
+  port: ${PORT:8080}
+
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eureka-domain}:2221/eureka/
+  instance:
+    hostname: ${spring.cloud.client.hostname}
+
 ##INFRA_ADMIN Settings
 project:
   name: spring-cloud-ui
