@@ -47,9 +47,9 @@ datasource:
     #username: testuser
     #password: 'testuser'
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://${vcap.services.mysql-service.credentials.hostname}:${vcap.services.mysql-service.credentials.port}/${vcap.services.mysql-service.credentials.name}
-    username: ${vcap.services.mysql-service.credentials.username}
-    password: ${vcap.services.mysql-service.credentials.password}
+    url: jdbc:mysql://15.164.195.107:31306/cpdev
+    username: terraman
+    password: Paasta!2022
 
 jpa:
   database: mysql
